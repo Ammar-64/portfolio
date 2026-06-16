@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'American VoxPop',
-    role: 'Founding Engineer & Technical Lead · Apr 2025–Present',
+    role: 'Founding Engineer & Technical Lead · Apr 2025 - Present',
     href: 'https://americanvoxpop.com',
     description: 'Civic engagement platform giving citizens access to all three branches of US government. Argued for and built owned data infrastructure end-to-end rather than reselling a third-party feed.',
     stats: {
@@ -38,8 +38,8 @@ const projects: Project[] = [
   },
   {
     title: 'Regen Therapy B2B Platform',
-    role: 'Lead / Sole Developer · Sep 2025–Present',
-    description: 'Multi-tenant API middleware letting a regenerative-medicine distributor sell through wholesale clients who are direct competitors — without ever exposing one client\'s data to another.',
+    role: 'Lead / Sole Developer · Sep 2025 - Present',
+    description: 'Multi-tenant API middleware letting a regenerative-medicine distributor sell through wholesale clients who are direct competitors, without ever exposing one client\'s data to another.',
     stats: {
       endpoints: '110+',
       systems: '5',
@@ -57,7 +57,7 @@ const projects: Project[] = [
   },
   {
     title: 'Dymapak Enterprise Integrations',
-    role: 'Lead Contract / Sole Developer · Mar 2025–Present',
+    role: 'Lead Contract / Sole Developer · Mar 2025 - Present',
     description: 'Four enterprise integration systems automating shipping, sales, support, and production for a US packaging manufacturer.',
     stats: {
       hoursSaved: '30+/wk',
@@ -67,16 +67,16 @@ const projects: Project[] = [
     },
     tech: ['Node.js', 'Zoho', 'Google Chat API', 'FedEx API', 'OAuth 2.0'],
     highlights: [
-      'SalesIQ–Google Chat: first known integration, 70% faster responses',
+      'SalesIQ-Google Chat: first known integration, 70% faster responses',
       'FedEx: 95% time reduction, automated customs, zero rejected shipments',
-      'Apollo–Close CRM: 4–5 hrs/day saved, 157 duplicates resolved',
+      'Apollo-Close CRM: 4-5 hrs/day saved, 157 duplicates resolved',
       'Factory import: 6 hours → 3 minutes (120x faster)',
     ],
     color: 'from-orange-600 to-red-600',
   },
   {
     title: 'DAR Platform',
-    role: 'Founding Engineer · Jan 2025–Present',
+    role: 'Founding Engineer · Jan 2025 - Present',
     href: 'https://findyourdar.xyz',
     description: 'SWANA diaspora discovery platform (findyourdar.xyz). Re-architected a non-functional prototype into a production web app and admin dashboard the non-technical founders run themselves.',
     stats: {
@@ -96,7 +96,7 @@ const projects: Project[] = [
   },
   {
     title: 'Displaced Talent Integration Hub',
-    role: 'Founder & Developer · 2024–Present',
+    role: 'Founder & Developer · 2024 - Present',
     voluntary: true,
     href: 'https://dtintegrationhub.com',
     description: 'The UK\'s first centralised platform for displaced-talent integration (dtintegrationhub.com). Reviewed by the UK Home Office and supported via an Integration Grant to TBB.',
@@ -117,7 +117,7 @@ const projects: Project[] = [
   },
   {
     title: 'Residay',
-    role: 'Founder & Developer · 2025–Present',
+    role: 'Founder & Developer · 2025 - Present',
     voluntary: true,
     href: 'https://residay.app',
     description: 'Visa-compliance tracking platform for immigrants and visa holders (residay.app), live on the Apple App Store. Counts absence days so a single miscount never costs years of residency progress.',
@@ -153,7 +153,7 @@ const Projects = () => {
             </h2>
           </div>
           <p className="text-muted max-w-sm text-sm leading-relaxed">
-            Enterprise platforms, first-of-kind integrations, and self-initiated products —
+            Enterprise platforms, first-of-kind integrations, and self-initiated products,
             built across regulated industries.
           </p>
         </div>
@@ -200,7 +200,7 @@ const Projects = () => {
 
               <p className="text-muted text-sm leading-relaxed mb-6">{project.description}</p>
 
-              {/* Stats — mono key/value */}
+              {/* Stats: mono key/value */}
               <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-6 pb-6 border-b border-line">
                 {Object.entries(project.stats).map(([key, value]) => (
                   <div key={key} className="flex items-baseline justify-between gap-2">

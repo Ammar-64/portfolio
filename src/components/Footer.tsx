@@ -75,7 +75,7 @@ const Footer = () => {
 
         <div className="border-t border-line pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="font-mono text-[11px] text-faint">
-            © {currentYear} Ammar Sammour — all rights reserved.
+            © {currentYear} Ammar Sammour. All rights reserved.
           </p>
           <p className="font-mono text-[11px] text-faint">
             Built with Next.js & TypeScript

@@ -32,7 +32,7 @@ const stats = [
   {
     value: '4',
     label: 'international stages',
-    context: 'Geneva, London & Lisbon — speaking 2023 to 2025',
+    context: 'Geneva, London & Lisbon, speaking 2023 to 2025',
   },
 ]
 

@@ -25,7 +25,7 @@ const Hero = () => {
 
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
         <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-16 items-center">
-          {/* Left — text */}
+          {/* Left: text */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const Hero = () => {
 
             <p className="text-lg text-muted leading-relaxed max-w-xl mb-8">
               I architect <span className="text-fg">enterprise platforms across regulated
-              industries</span> — civic-tech reaching all three branches of US government,
+              industries</span>: civic-tech reaching all three branches of US government,
               multi-tenant systems for competing clients, and the{' '}
               <span className="text-accent">UK&apos;s first displaced-talent integration platform</span>,
               reviewed by the UK Home Office.
@@ -101,7 +101,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right — headshot, framed & captioned */}
+          {/* Right: headshot, framed & captioned */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}

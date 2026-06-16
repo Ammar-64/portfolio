@@ -16,7 +16,7 @@ const speakingEngagements = [
   {
     title: 'London Tech Week 2024',
     role: 'Panellist',
-    topic: 'Tech Jobs: Empowering Refugees Beyond Displacement — moderated by Mike Butcher MBE (TechCrunch); 45,000+ attendees',
+    topic: 'Tech Jobs: Empowering Refugees Beyond Displacement. Moderated by Mike Butcher MBE (TechCrunch); 45,000+ attendees',
     date: '12 Jun 2024',
     location: 'London, UK',
     type: 'Tech Conference',
@@ -25,7 +25,7 @@ const speakingEngagements = [
   {
     title: 'UN Global Refugee Forum 2023',
     role: 'Speaker',
-    topic: 'Unlocking Potential: Spotlight on Refugee Labour Mobility — alongside the IOM Director General & Canada\'s Immigration Minister; 4,000+ delegates',
+    topic: 'Unlocking Potential: Spotlight on Refugee Labour Mobility. Alongside the IOM Director General & Canada\'s Immigration Minister; 4,000+ delegates',
     date: 'Dec 2023',
     location: 'Geneva, Switzerland',
     type: 'UN Forum',
@@ -34,7 +34,7 @@ const speakingEngagements = [
   {
     title: 'Web Summit 2023',
     role: 'TBB Ambassador',
-    topic: 'EU-funded Displaced Talents for Europe (DT4E) — invited by IOM; 70,000+ attendees',
+    topic: 'EU-funded Displaced Talents for Europe (DT4E). Invited by IOM; 70,000+ attendees',
     date: 'Nov 2023',
     location: 'Lisbon, Portugal',
     type: 'Tech Conference',

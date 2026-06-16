@@ -71,7 +71,7 @@ const Contact = () => {
           <div>
             <p className="text-muted leading-relaxed mb-8 max-w-md">
               Whether you need a technical lead, help with a hard integration, or want to discuss
-              a speaking opportunity — I read every message.
+              a speaking opportunity, I read every message.
             </p>
 
             <div className="space-y-3 mb-8">
@@ -179,7 +179,7 @@ const Contact = () => {
 
               {status === 'success' && (
                 <p className="text-sm text-center text-cool" role="status">
-                  Thanks — your message has been sent. I&apos;ll be in touch soon.
+                  Thanks! Your message has been sent. I&apos;ll be in touch soon.
                 </p>
               )}
               {status === 'error' && (
