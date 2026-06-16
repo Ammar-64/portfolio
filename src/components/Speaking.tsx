@@ -5,67 +5,58 @@ import { Mic, Award, Globe, Users, Calendar, MapPin } from 'lucide-react'
 
 const speakingEngagements = [
   {
-    title: 'Geneva CRCP 2025',
-    role: 'Panel Speaker',
-    topic: 'Private Sector Engagement with Displaced Populations',
-    date: 'June 2025',
+    title: 'UNHCR CRCP 2025',
+    role: 'Speaker',
+    topic: 'The fundamental building blocks of skills-based pathways: effectively engaging the private sector',
+    date: '25 June 2025',
     location: 'Geneva, Switzerland',
-    type: 'International Conference',
+    type: 'UN Conference',
     icon: Globe
   },
   {
-    title: 'UK Home Office Community-led Sponsorship Review',
-    role: 'Lived Experience Contributor',
-    topic: 'Roundtable Discussion on Refugee Pathways',
-    date: 'April 2025',
-    location: 'London, UK',
-    type: 'Government Advisory',
-    icon: Award
-  },
-  {
     title: 'London Tech Week 2024',
-    role: 'Panel Speaker',
-    topic: 'Tech Jobs: Empowering Refugees Beyond Displacement',
-    date: 'June 2024',
+    role: 'Panellist',
+    topic: 'Tech Jobs: Empowering Refugees Beyond Displacement — moderated by Mike Butcher MBE (TechCrunch); 45,000+ attendees',
+    date: '12 June 2024',
     location: 'London, UK',
     type: 'Tech Conference',
     icon: Mic
   },
   {
-    title: 'Global Refugee Forum 2023',
-    role: 'Panel Speaker',
-    topic: 'Refugee Labour Mobility Through Employment',
+    title: 'UN Global Refugee Forum 2023',
+    role: 'Speaker',
+    topic: 'Unlocking Potential: Spotlight on Refugee Labour Mobility — alongside the IOM Director General & Canada\'s Immigration Minister; 4,000+ delegates',
     date: 'December 2023',
     location: 'Geneva, Switzerland',
     type: 'UN Forum',
     icon: Globe
   },
   {
-    title: 'UK Home Office Advisory',
-    role: 'Refugee Advisor',
-    topic: '2024 Consultations on Resettlement and Complementary Pathways',
-    date: '2024',
-    location: 'United Kingdom',
-    type: 'Policy Consultation',
-    icon: Award
+    title: 'Web Summit 2023',
+    role: 'TBB Ambassador',
+    topic: 'EU-funded Displaced Talents for Europe (DT4E) — invited by IOM; 70,000+ attendees',
+    date: 'November 2023',
+    location: 'Lisbon, Portugal',
+    type: 'Tech Conference',
+    icon: Mic
   }
 ]
 
 const advisoryRoles = [
   {
-    organization: 'Global Task Force for Labour Mobility',
+    organization: 'UK Home Office',
+    role: 'Refugee Labour Mobility Pathways Advisor',
+    description: 'Community-led Sponsorship Roundtable (2 Marsham St, Apr 2025) and the UK delegation to CRCP Geneva (Jun 2024).'
+  },
+  {
+    organization: 'Global Task Force on Labour Mobility',
     role: 'Founding Member, Refugee Advisory Committee',
-    description: 'Contributing to global policies on refugee labour mobility'
+    description: 'Contributing to global policy on refugee labour mobility.'
   },
   {
     organization: 'Talent Beyond Boundaries UK',
-    role: 'Advisory Committee Member',
-    description: 'Supporting UK displaced talent integration as successful alumnus'
-  },
-  {
-    organization: 'UK Home Office',
-    role: 'Refugee Labour Mobility Pathways Advisor',
-    description: 'Providing lived experience insights for policy development'
+    role: 'Inaugural Alumni Advisory Committee',
+    description: 'Supporting UK displaced-talent integration as a successful alumnus.'
   }
 ]
 
@@ -168,19 +159,22 @@ const Speaking = () => {
             </div>
           </div>
 
-          {/* Additional Achievement */}
+          {/* Beyond Work */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12 text-center"
+            className="mt-16 text-center"
           >
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-400 mb-4">
+              Beyond Work
+            </h3>
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-100 to-red-100 px-6 py-3 rounded-full">
               <span className="text-2xl">🥋</span>
               <p className="text-gray-800">
-                <span className="font-bold">National Karate Champion</span> - 
-                12 years competing with multiple championships & 2009 World Championship participation
+                <span className="font-bold">National Karate Champion</span> —
+                12 years competing, including the 2009 World Championship
               </p>
             </div>
           </motion.div>

@@ -3,120 +3,133 @@
 import { motion } from 'framer-motion'
 import { Code2, Users, GitBranch, TrendingUp, Globe, Shield } from 'lucide-react'
 
-const projects = [
+interface Project {
+  title: string
+  role: string
+  voluntary?: boolean
+  description: string
+  stats: Record<string, string>
+  tech: string[]
+  highlights: string[]
+  color: string
+}
+
+const projects: Project[] = [
   {
     title: 'American VoxPop',
-    role: 'Founding Engineer',
-    description: 'Revolutionary civic engagement platform with legislative tracking, gamification, and multi-tier ambassador network. Integrated 13 government APIs for real-time data.',
+    role: 'Founding Engineer & Technical Lead · Apr 2025–Present',
+    description: 'Civic engagement platform giving citizens access to all three branches of US government. Argued for and built owned data infrastructure end-to-end rather than reselling a third-party feed.',
     stats: {
-      lines: '133,302',
-      apis: '228',
-      tables: '56',
-      users: '50,000+'
+      endpoints: '490+',
+      tables: '101',
+      components: '800+',
+      dataSources: '8'
     },
-    tech: ['Next.js 15', 'NestJS 10', 'PostgreSQL', 'AWS ECS', 'Redis'],
+    tech: ['Next.js', 'NestJS 10', 'PostgreSQL', 'AWS', 'Terraform', 'BullMQ'],
     highlights: [
-      '892 commits (82% of codebase)',
-      'Made 100% of architectural decisions',
-      'Integrated BillTrack50, Democracy Works APIs',
-      'Production AWS deployment scalable to millions'
+      'Launched at americanvoxpop.com on 11 Mar 2026',
+      '935 weekly active users in 8 weeks, no paid marketing',
+      'AWS ECS Fargate/RDS/ElastiCache/S3 via Terraform; 2,598 CI/CD runs',
+      'Designed & built the Patriot Pay civic engagement engine'
     ],
     color: 'from-blue-600 to-purple-600'
   },
   {
-    title: 'DAR Platform',
-    role: 'Founding Engineer',
-    description: 'Digital hub for MENA creatives in Western diaspora. Transformed prototype into production platform serving global creative communities.',
+    title: 'Regen Therapy B2B Platform',
+    role: 'Lead / Sole Developer · Sep 2025–Present',
+    description: 'Multi-tenant API middleware letting a regenerative-medicine distributor sell through wholesale clients who are direct competitors — without ever exposing one client\'s data to another.',
     stats: {
-      lines: '28,778',
-      releases: '93',
-      apps: '3',
-      uptime: '99.9%'
+      endpoints: '110+',
+      systems: '5',
+      incidents: '0',
+      build: '3 mo'
     },
-    tech: ['React Native', 'tRPC', 'Prisma ORM', 'Vercel', 'Expo'],
+    tech: ['NestJS', 'PostgreSQL', 'GCP Cloud Run', 'Zoho', 'ShipStation'],
     highlights: [
-      'Built 3 interconnected applications',
-      'Web, Mobile, and Admin platforms',
-      'Serving hundreds of MENA creatives',
-      '42% of total codebase contributions'
-    ],
-    color: 'from-purple-600 to-pink-600'
-  },
-  {
-    title: 'Apollo-Close CRM Integration',
-    role: 'Sole Developer',
-    description: 'Sophisticated CRM integration synchronizing sales data between Apollo.io and Close CRM with intelligent deduplication.',
-    stats: {
-      lines: '44,371',
-      accuracy: '100%',
-      reduction: '85%',
-      tables: '5'
-    },
-    tech: ['Node.js', 'NestJS', 'PostgreSQL', 'Railway', 'Docker'],
-    highlights: [
-      'Processed 157 companies with 100% accuracy',
-      'Reduced manual data entry by 85%',
-      '59 commits as sole developer',
-      'Zero downtime deployment'
+      'Dual-layer tenant isolation: cross-tenant leakage architecturally impossible',
+      'Saga orchestration with automatic rollback across 5 external systems',
+      'Zero data-security incidents since launch',
+      'Complete platform delivered solo in 3 months'
     ],
     color: 'from-green-600 to-teal-600'
   },
   {
-    title: 'FedEx Enterprise Integration',
-    role: 'Lead Developer',
-    description: 'Enterprise-grade FedEx shipping automation with OAuth 2.0, supporting 13+ international markets.',
+    title: 'Dymapak Enterprise Integrations',
+    role: 'Lead Contract / Sole Developer · Mar 2025–Present',
+    description: 'Four enterprise integration systems automating shipping, sales, support, and production for a US packaging manufacturer.',
     stats: {
-      lines: '1,500',
-      functions: '21',
-      markets: '13+',
-      reduction: '87%'
+      hoursSaved: '30+/wk',
+      newMarkets: '13',
+      faster: '120x',
+      systems: '4'
     },
-    tech: ['OAuth 2.0', 'REST APIs', 'Zoho Creator', 'Deluge', 'AES-256'],
+    tech: ['Node.js', 'Zoho', 'Google Chat API', 'FedEx API', 'OAuth 2.0'],
     highlights: [
-      '800 labels/hour processing capacity',
-      '95% error reduction',
-      '87% time reduction (15-20 min → 2-3 min)',
-      '100% customs compliance'
+      'SalesIQ–Google Chat: first known integration, 70% faster responses',
+      'FedEx: 95% time reduction, automated customs, zero rejected shipments',
+      'Apollo–Close CRM: 4–5 hrs/day saved, 157 duplicates resolved',
+      'Factory import: 6 hours → 3 minutes (120x faster)'
     ],
     color: 'from-orange-600 to-red-600'
   },
   {
-    title: 'SalesIQ Google Chat Integration',
-    role: 'Technical Architect',
-    description: 'Real-time communication platform bridging Zoho SalesIQ and Google Chat with serverless architecture.',
+    title: 'DAR Platform',
+    role: 'Founding Engineer · Jan 2025–Present',
+    description: 'SWANA diaspora discovery platform (findyourdar.xyz). Re-architected a non-functional prototype into a production web app and admin dashboard the non-technical founders run themselves.',
     stats: {
-      lines: '20,171',
-      functions: '650+',
-      reduction: '70%',
-      endpoints: '54'
+      lighthouse: '90+',
+      tables: '22',
+      search: 'AR/EN RTL',
+      outages: '0'
     },
-    tech: ['Google Chat API', 'Webhooks', 'JWT', 'Serverless', 'Node.js'],
+    tech: ['Next.js', 'tRPC', 'Prisma', 'XState', 'Builder.io', 'Vercel'],
     highlights: [
-      '70% response time reduction',
-      'Sub-100ms webhook processing',
-      '1000+ concurrent users support',
-      '84 project files'
+      'Turborepo monorepo: shared tRPC, Prisma, UI & XState packages',
+      'Builder.io headless CMS for non-technical founder independence',
+      'Multilingual Arabic/English fuzzy search with RTL handling',
+      'Lighthouse 90+ across all categories; stable since launch'
     ],
-    color: 'from-cyan-600 to-blue-600'
+    color: 'from-purple-600 to-pink-600'
   },
   {
     title: 'Displaced Talent Integration Hub',
-    role: 'Founder & Developer',
-    description: 'UK Home Office-reviewed platform serving displaced talents with comprehensive integration resources.',
+    role: 'Founder & Developer · 2024–Present',
+    voluntary: true,
+    description: 'The UK\'s first centralised platform for displaced-talent integration (dtintegrationhub.com). Reviewed by the UK Home Office and supported via an Integration Grant to TBB.',
     stats: {
-      lines: '13,174',
-      users: '1,000+',
-      pages: '16',
-      endorsement: 'UK Gov'
+      users: '500+',
+      activeUsers: '280',
+      categories: '8',
+      infraCost: '£0/mo'
     },
-    tech: ['Next.js 15', 'Firebase', 'TypeScript', 'Vercel', 'Tailwind'],
+    tech: ['Next.js', 'React', 'TypeScript', 'Firebase'],
     highlights: [
-      'Reviewed by UK Home Office',
-      'Volunteer initiative as TBB alumnus',
-      '100% TypeScript coverage',
-      'Zero infrastructure costs'
+      'Reviewed by the UK Home Office; live since Dec 2023',
+      'Searchable resources across 8 integration categories',
+      '75% load-time reduction via code-splitting',
+      'Serverless architecture at £0/month infrastructure cost'
     ],
     color: 'from-indigo-600 to-purple-600'
+  },
+  {
+    title: 'Residay',
+    role: 'Founder & Developer · 2025–Present',
+    voluntary: true,
+    description: 'Visa-compliance tracking platform for immigrants and visa holders (residay.app), live on the Apple App Store. Counts absence days so a single miscount never costs years of residency progress.',
+    stats: {
+      appStore: 'iOS live',
+      apps: '3',
+      visaTypes: '4+',
+      calcEngine: '0 deps'
+    },
+    tech: ['NestJS', 'Next.js', 'React Native / Expo', 'Turborepo'],
+    highlights: [
+      'Published on the Apple App Store; Android in public beta',
+      'Compliance engine runs on server, browser & mobile offline',
+      'AI document scanning and what-if trip simulator',
+      'UK ILR, Schengen 90/180 & Global Talent; free for refugees'
+    ],
+    color: 'from-cyan-600 to-blue-600'
   }
 ]
 
@@ -150,9 +163,16 @@ const Projects = () => {
                 {/* Project Header */}
                 <div className={`h-2 bg-gradient-to-r ${project.color}`} />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {project.title}
+                    </h3>
+                    {project.voluntary && (
+                      <span className="flex-shrink-0 px-2.5 py-0.5 bg-secondary-100 text-secondary-700 text-xs font-semibold rounded-full">
+                        Voluntary
+                      </span>
+                    )}
+                  </div>
                   <p className="text-sm text-gray-500 mb-3">{project.role}</p>
                   <p className="text-gray-600 mb-4">{project.description}</p>
 

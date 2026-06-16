@@ -5,69 +5,42 @@ import { Briefcase, Calendar, ChevronRight } from 'lucide-react'
 
 const experiences = [
   {
-    title: 'Education Technology Specialist',
+    title: 'Senior Software Engineer & Technical Lead',
     company: 'Alsaab Ltd',
     location: 'London, UK',
     period: 'April 2023 - Present',
-    description: 'Leading technical delivery for multiple enterprise clients through professional services model.',
+    description: 'Leading technical delivery for enterprise clients, making all architectural decisions and building systems from scratch.',
     highlights: [
-      'American VoxPop - Built platform from scratch: 133,302 lines of code, 892 commits (82% ownership)',
-      'Apollo-Close CRM - 44,371 LOC integration with 100% accuracy for 157 companies',
-      'DAR Platform - Transformed prototype into production serving hundreds globally',
-      'FedEx Integration - 87% time reduction (15-20 min → 2-3 min)',
-      'Re:Coded Subcontract - Built platform serving 50,000+ students, eliminating 40+ hours weekly manual work'
+      'American VoxPop – architected the platform: 490+ API endpoints, 101 tables, 8 government data sources across all 3 branches',
+      'Regen Therapy – built a multi-tenant B2B platform solo in 3 months; cross-tenant data leakage made architecturally impossible',
+      'Dymapak – four enterprise integrations eliminating 30+ hours of manual work per week; opened 13 new markets',
+      'DAR Platform – re-architected a prototype into a production app with Lighthouse 90+ across all categories'
     ]
   },
   {
-    title: 'Senior Trainer & Software Engineer',
+    title: 'Coding Trainer → Senior Trainer & Software Engineer',
     company: 'Re:Coded',
     location: 'Remote',
-    period: 'January 2022 - March 2023',
-    description: 'Led digital transformation across organizational verticals while mentoring the next generation.',
+    period: 'November 2019 - Early 2025',
+    description: 'Direct employment Nov 2019 – Mar 2023; continued engagement via Alsaab Ltd through early 2025. Led digital transformation while training the next generation of engineers.',
     highlights: [
-      'Led digital transformation across 6 organizational verticals',
-      'Developed curriculum eliminating external costs',
-      'Mentored 3 junior instructors to senior level',
-      'Achieved 85% graduate employment rate'
+      'Built an automated learning platform serving 50,000+ students and 3,000 alumni across 15 countries',
+      'Salesforce integration eliminating 40+ hours of weekly manual work',
+      'Mentored 200+ students to employment; 85% graduate employment rate',
+      '92% retention rate across frontend/backend bootcamps'
     ]
   },
   {
-    title: 'Coding Trainer & Software Engineer',
-    company: 'Re:Coded',
-    location: 'Remote',
-    period: 'January 2020 - December 2021',
-    description: 'Delivered comprehensive coding bootcamps and created innovative educational tools.',
-    highlights: [
-      'Delivered frontend/backend bootcamps achieving 92% retention',
-      'Created admission challenges improving quality assessment',
-      'Mentored 200+ students to employment',
-      'Built custom monitoring tools for student progress tracking'
-    ]
-  },
-  {
-    title: 'Coding Trainer Assistant',
-    company: 'Re:Coded',
-    location: 'Turkey',
-    period: 'September 2019 - December 2019',
-    description: 'Guided student teams through capstone projects and curriculum development.',
-    highlights: [
-      'Guided student capstone projects from ideation to deployment',
-      'Assisted curriculum development incorporating industry skills',
-      'Facilitated collaborative learning environment',
-      'Supported lead instructors in course delivery'
-    ]
-  },
-  {
-    title: 'Volunteer Initiative - Displaced Talent Integration Hub',
-    company: 'Independent Project',
+    title: 'Voluntary Initiatives',
+    company: 'DT Integration Hub · Residay',
     location: 'UK',
     period: '2024 - Present',
-    description: 'Created UK\'s first centralized refugee integration platform as a volunteer initiative.',
+    description: 'Self-initiated digital products built outside employment, serving communities Ammar belongs to.',
     highlights: [
-      'Serves 1,000+ UK displaced talents',
-      'Reviewed and endorsed by UK Home Office',
-      'Built with Next.js 15, Firebase - 13,174 lines of code',
-      'Giving back as a TBB alumnus who successfully integrated'
+      'Displaced Talent Integration Hub – the UK\'s first centralised integration platform, reviewed by the UK Home Office',
+      'Residay – visa-compliance tracker live on the Apple App Store, free for refugees and displaced people',
+      'Giving back as a TBB alumnus who successfully integrated into the UK',
+      'See the Projects section above for full technical detail'
     ]
   }
 ]

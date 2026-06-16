@@ -28,4 +28,11 @@ Thumbs.db
 out
 .env*
 .env
+!.env.example
 .cursor/rules/nx-rules.mdc
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Private application material — keep local only, never publish
+/GTV Application/

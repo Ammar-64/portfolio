@@ -7,9 +7,10 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ammarsammour.com'),
   title: 'Ammar Sammour - Senior Software Engineer & Technical Lead',
-  description: 'Portfolio of Ammar Sammour - Senior Software Engineer with 245,000+ lines of production code across 8 major projects. Founding Engineer of American VoxPop serving 50,000+ users.',
-  keywords: 'software engineer, full stack developer, React, Next.js, Node.js, TypeScript, technical lead, London, UK',
+  description: 'Portfolio of Ammar Sammour - Senior Software Engineer with 6+ years architecting enterprise platforms across regulated industries. Founding Engineer of American VoxPop, builder of the UK\'s first displaced-talent integration platform (reviewed by the UK Home Office), international speaker, and UK Home Office advisor.',
+  keywords: 'software engineer, technical lead, architecture, multi-tenant, civic technology, React, Next.js, NestJS, TypeScript, AWS, Terraform, London, UK',
   authors: [{ name: 'Ammar Sammour' }],
   openGraph: {
     type: 'website',

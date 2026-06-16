@@ -5,12 +5,12 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const stats = [
-  { value: '245,000+', label: 'Lines of Production Code', suffix: '' },
-  { value: '892', label: 'Commits on American VoxPop', suffix: '(82% ownership)' },
-  { value: '75-97', label: 'Processing Time Reduction', suffix: '%' },
-  { value: '99.9', label: 'System Uptime', suffix: '%' },
-  { value: '5,000+', label: 'UK Displaced Talents Supported', suffix: '' },
-  { value: '85', label: 'Graduate Employment Rate', suffix: '%' },
+  { value: '490+', label: 'API Endpoints (American VoxPop)', suffix: '' },
+  { value: '8', label: 'Government Data Sources Integrated', suffix: '' },
+  { value: '30+', label: 'Hours/Week of Manual Work Eliminated', suffix: '' },
+  { value: '0', label: 'Cross-Tenant Security Incidents', suffix: '' },
+  { value: '500+', label: 'UK Displaced Talents Supported', suffix: '' },
+  { value: '4', label: 'International Conferences (2023–2025)', suffix: '' },
 ]
 
 const Stats = () => {

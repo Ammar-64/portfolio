@@ -16,7 +16,8 @@ const Footer = () => {
 
   const socialLinks = [
     { label: 'GitHub', href: 'https://github.com/Ammar-64' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/ammar-sammour' },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/ammar-sam' },
+    { label: 'Residay', href: 'https://residay.app' },
     { label: 'Email', href: 'mailto:ammar.n.sammour@gmail.com' },
   ]
 
@@ -37,7 +38,7 @@ const Footer = () => {
               enterprise-scale applications and leading technical transformations.
             </p>
             <p className="text-sm text-gray-500">
-              245,000+ lines of production code | 50,000+ users served | International speaker
+              Enterprise platforms across regulated industries | UK Home Office advisor | International speaker
             </p>
           </div>
 

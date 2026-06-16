@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Phone, MapPin, Code2, Users, Rocket } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, MapPin, Code2, Shield, Rocket } from 'lucide-react'
 import Link from 'next/link'
 
 const Hero = () => {
@@ -28,10 +28,13 @@ const Hero = () => {
               Senior Software Engineer & Technical Lead
             </h2>
             <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-              Accomplished Software Engineer with <span className="text-secondary-400 font-semibold">245,000+ lines</span> of 
-              production code across 8 major projects. Founding Engineer of American VoxPop 
-              serving <span className="text-secondary-400 font-semibold">50,000+ users</span>. 
-              International speaker at Geneva CRCP 2025, London Tech Week 2024, and Global Refugee Forum 2023.
+              <span className="text-secondary-400 font-semibold">6+ years</span> architecting
+              enterprise platforms across regulated industries. Built the first enterprise
+              SalesIQ–Google Chat integration, the <span className="text-secondary-400 font-semibold">UK&apos;s
+              first displaced-talent integration platform</span> (reviewed by the UK Home Office),
+              and multi-tenant security for competing wholesale clients. International speaker at
+              4 conferences across Geneva, London &amp; Lisbon, and a UK Home Office advisor on
+              refugee labour-mobility pathways.
             </p>
 
             {/* Contact Info */}
@@ -73,7 +76,7 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex gap-4 mt-8">
               <a
-                href="https://linkedin.com/in/ammar-sammour"
+                href="https://linkedin.com/in/ammar-sam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
@@ -100,23 +103,23 @@ const Hero = () => {
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <Code2 className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-2">245K+</div>
-              <div className="text-sm text-gray-300">Lines of Code</div>
+              <div className="text-3xl font-bold mb-2">490+</div>
+              <div className="text-sm text-gray-300">API Endpoints</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <Users className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-2">50K+</div>
-              <div className="text-sm text-gray-300">Users Served</div>
+              <Shield className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
+              <div className="text-3xl font-bold mb-2">8</div>
+              <div className="text-sm text-gray-300">Gov Data Sources</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <Rocket className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-2">8</div>
-              <div className="text-sm text-gray-300">Major Projects</div>
+              <div className="text-3xl font-bold mb-2">30+</div>
+              <div className="text-sm text-gray-300">Hrs/Week Eliminated</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-3">🎤</div>
-              <div className="text-3xl font-bold mb-2">3</div>
-              <div className="text-sm text-gray-300">Global Conferences</div>
+              <div className="text-3xl font-bold mb-2">4</div>
+              <div className="text-sm text-gray-300">Intl Conferences</div>
             </div>
           </motion.div>
         </div>

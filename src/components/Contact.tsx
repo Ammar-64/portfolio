@@ -1,9 +1,43 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Linkedin, Github, Calendar, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Github, Calendar, Send, Loader2 } from 'lucide-react'
+
+type Status = 'idle' | 'sending' | 'success' | 'error'
 
 const Contact = () => {
+  const [status, setStatus] = useState<Status>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    const data = Object.fromEntries(new FormData(form))
+
+    setStatus('sending')
+    setErrorMessage('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: '' }))
+        throw new Error(error || 'Something went wrong. Please try again.')
+      }
+
+      setStatus('success')
+      form.reset()
+    } catch (err) {
+      setStatus('error')
+      setErrorMessage(err instanceof Error ? err.message : 'Something went wrong.')
+    }
+  }
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +105,7 @@ const Contact = () => {
                 <h4 className="text-lg font-semibold mb-4">Connect on Social</h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://linkedin.com/in/ammar-sammour"
+                    href="https://linkedin.com/in/ammar-sam"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors duration-200"
@@ -87,7 +121,7 @@ const Contact = () => {
                     <Github className="w-6 h-6" />
                   </a>
                   <a
-                    href="https://calendly.com/ammar-sammour"
+                    href="https://calendly.com/ammar-sammour/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors duration-200"
@@ -101,7 +135,7 @@ const Contact = () => {
             {/* Quick Message Form */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
               <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Your Name
@@ -160,11 +194,32 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-white text-primary-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-2"
+                  disabled={status === 'sending'}
+                  className="w-full px-6 py-3 bg-white text-primary-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  {status === 'sending' ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
                 </button>
+
+                {status === 'success' && (
+                  <p className="text-sm text-center text-green-300" role="status">
+                    Thanks — your message has been sent. I&apos;ll be in touch soon.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p className="text-sm text-center text-red-300" role="alert">
+                    {errorMessage}
+                  </p>
+                )}
               </form>
             </div>
           </div>

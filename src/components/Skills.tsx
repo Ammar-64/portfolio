@@ -17,17 +17,17 @@ const skillCategories = [
     title: 'Languages & Frameworks',
     icon: Code2,
     skills: [
-      'TypeScript', 'JavaScript (ES6+)', 'React 18', 'Next.js 15', 
-      'Node.js', 'NestJS 10', 'Python', 'Java'
+      'TypeScript', 'JavaScript (ES6+)', 'React 19', 'Next.js 15',
+      'Node.js', 'NestJS 10', 'Python'
     ],
     color: 'from-blue-500 to-cyan-500'
   },
   {
-    title: 'Databases & Caching',
+    title: 'Backend & Data',
     icon: Database,
     skills: [
-      'PostgreSQL', 'MongoDB', 'Redis', 'Firebase', 
-      'Prisma ORM', 'Query Optimization', 'Database Design', 'Indexing'
+      'PostgreSQL', 'MongoDB', 'Redis', 'Firebase',
+      'Prisma ORM', 'REST APIs', 'tRPC', 'WebSockets', 'Bull Queues'
     ],
     color: 'from-green-500 to-emerald-500'
   },
@@ -35,8 +35,8 @@ const skillCategories = [
     title: 'Cloud & DevOps',
     icon: Cloud,
     skills: [
-      'AWS (ECS, RDS, S3)', 'Docker', 'Vercel', 'Railway', 
-      'CI/CD', 'GitHub Actions', 'Infrastructure as Code', 'Monitoring'
+      'AWS (ECS Fargate, RDS, ElastiCache, S3)', 'GCP (Cloud Run, Cloud SQL)', 'Docker', 'Vercel',
+      'Railway', 'Terraform', 'GitHub Actions', 'CI/CD'
     ],
     color: 'from-purple-500 to-pink-500'
   },
@@ -44,8 +44,8 @@ const skillCategories = [
     title: 'Architecture',
     icon: Layers,
     skills: [
-      'Microservices', 'Event-Driven', 'Serverless', 'RESTful APIs', 
-      'WebSockets', 'GraphQL', 'Domain-Driven Design', 'CQRS'
+      'Multi-tenant Systems', 'Event-Driven', 'Saga Orchestration', 'Serverless',
+      'CI/CD Pipelines', 'Infrastructure as Code', 'RESTful APIs', 'WebSockets'
     ],
     color: 'from-orange-500 to-red-500'
   },
