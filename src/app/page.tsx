@@ -1,19 +1,21 @@
 'use client'
 
 import Hero from '@/components/Hero'
-import Skills from '@/components/Skills'
+import Marquee from '@/components/Marquee'
 import Projects from '@/components/Projects'
+import Stats from '@/components/Stats'
 import Experience from '@/components/Experience'
+import Skills from '@/components/Skills'
 import Speaking from '@/components/Speaking'
 import Contact from '@/components/Contact'
-import Stats from '@/components/Stats'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
+      <Marquee />
       <Projects />
+      <Stats />
       <Experience />
       <Skills />
       <Speaking />

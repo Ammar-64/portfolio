@@ -1,127 +1,158 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Phone, MapPin, Code2, Shield, Rocket } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
+import { Github, Linkedin, Mail, MapPin, ArrowUpRight, ArrowDown } from 'lucide-react'
+
+const proofPoints = [
+  'Founding Engineer, American VoxPop',
+  'UK Home Office advisor',
+  'Speaker · Geneva · London · Lisbon',
+  "UK's first displaced-talent platform",
+]
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-800 text-white overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500 rounded-full opacity-20 blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500 rounded-full opacity-20 blur-3xl animate-pulse delay-1000" />
-      </div>
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden bg-ink"
+    >
+      {/* Background texture + accent glow */}
+      <div className="absolute inset-0 bg-linegrid opacity-[0.35]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink to-ink" />
+      <div className="absolute -top-24 -right-24 w-[34rem] h-[34rem] bg-accent/10 rounded-full blur-[120px]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left — text */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Ammar Sammour
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-primary-200 mb-6">
-              Senior Software Engineer & Technical Lead
-            </h2>
-            <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-              <span className="text-secondary-400 font-semibold">6+ years</span> architecting
-              enterprise platforms across regulated industries. Built the first enterprise
-              SalesIQ–Google Chat integration, the <span className="text-secondary-400 font-semibold">UK&apos;s
-              first displaced-talent integration platform</span> (reviewed by the UK Home Office),
-              and multi-tenant security for competing wholesale clients. International speaker at
-              4 conferences across Geneva, London &amp; Lisbon, and a UK Home Office advisor on
-              refugee labour-mobility pathways.
-            </p>
-
-            {/* Contact Info */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 text-sm">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-secondary-400" />
-                <span>London, UK</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-secondary-400" />
-                <a href="mailto:ammar.n.sammour@gmail.com" className="hover:text-secondary-400 transition-colors">
-                  ammar.n.sammour@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-secondary-400" />
-                <a href="tel:+447833063568" className="hover:text-secondary-400 transition-colors">
-                  +44 7833 063568
-                </a>
-              </div>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="kicker">Senior Software Engineer & Technical Lead</span>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <h1 className="font-display font-bold tracking-tight text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
+              Ammar
+              <br />
+              Sammour
+            </h1>
+
+            <p className="text-lg text-muted leading-relaxed max-w-xl mb-8">
+              I architect <span className="text-fg">enterprise platforms across regulated
+              industries</span> — civic-tech reaching all three branches of US government,
+              multi-tenant systems for competing clients, and the{' '}
+              <span className="text-accent">UK&apos;s first displaced-talent integration platform</span>,
+              reviewed by the UK Home Office.
+            </p>
+
+            {/* Status line */}
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-9 font-mono text-xs text-muted">
+              <span className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-cool opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cool" />
+                </span>
+                Available for select work
+              </span>
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-accent" />
+                London, UK
+              </span>
+              <span>7+ yrs experience</span>
+            </div>
+
+            {/* Actions */}
+            <div className="flex flex-wrap items-center gap-3 mb-8">
               <Link
-                href="#projects"
-                className="px-6 py-3 bg-white text-primary-800 font-semibold rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105"
+                href="#work"
+                className="group inline-flex items-center gap-2 px-5 py-3 bg-accent text-ink font-semibold rounded-lg hover:bg-accent-400 transition-colors"
               >
-                View Projects
+                View Work
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
               <Link
                 href="#contact"
-                className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-800 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-3 border border-line text-fg font-medium rounded-lg hover:border-accent hover:text-accent transition-colors"
               >
-                Get in Touch
+                Get in touch
               </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex gap-4 mt-8">
-              <a
-                href="https://linkedin.com/in/ammar-sam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com/Ammar-64"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+              <div className="flex items-center gap-1.5 ml-1">
+                {[
+                  { href: 'https://linkedin.com/in/ammar-sam', icon: Linkedin, label: 'LinkedIn' },
+                  { href: 'https://github.com/Ammar-64', icon: Github, label: 'GitHub' },
+                  { href: 'mailto:ammar.n.sammour@gmail.com', icon: Mail, label: 'Email' },
+                ].map(({ href, icon: Icon, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="p-2.5 rounded-lg border border-line text-muted hover:text-accent hover:border-accent transition-colors"
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
 
-          {/* Right Column - Stats Cards */}
+          {/* Right — headshot, framed & captioned */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="relative mx-auto lg:mx-0 w-full max-w-sm"
           >
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <Code2 className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-2">490+</div>
-              <div className="text-sm text-gray-300">API Endpoints</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <Shield className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-2">8</div>
-              <div className="text-sm text-gray-300">Gov Data Sources</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <Rocket className="w-10 h-10 text-secondary-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold mb-2">30+</div>
-              <div className="text-sm text-gray-300">Hrs/Week Eliminated</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <div className="text-4xl mb-3">🎤</div>
-              <div className="text-3xl font-bold mb-2">4</div>
-              <div className="text-sm text-gray-300">Intl Conferences</div>
+            {/* Corner ticks */}
+            <span className="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-accent" />
+            <span className="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-accent" />
+
+            <div className="panel p-3 group">
+              <div className="relative rounded-xl overflow-hidden aspect-square">
+                <Image
+                  src="/headshot.png"
+                  alt="Ammar Sammour"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 90vw, 380px"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+              </div>
+              {/* Caption bar */}
+              <div className="flex items-center justify-between px-2 pt-3 pb-1 font-mono text-[11px]">
+                <span className="text-muted">ammar.sammour</span>
+                <span className="text-accent">/ London · est. 2023</span>
+              </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Proof ticker */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="mt-16 border-t border-line pt-6"
+        >
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-xs text-muted">
+            {proofPoints.map((p, i) => (
+              <span key={p} className="flex items-center gap-6">
+                {i > 0 && <span className="text-line">/</span>}
+                <span className="hover:text-fg transition-colors">{p}</span>
+              </span>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Scroll cue */}
+        <div className="hidden lg:flex justify-center mt-10">
+          <ArrowDown className="w-5 h-5 text-faint animate-bounce" />
         </div>
       </div>
     </section>
