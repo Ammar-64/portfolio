@@ -51,13 +51,6 @@ const Hero = () => {
 
             {/* Status line */}
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-9 font-mono text-xs text-muted">
-              <span className="flex items-center gap-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-cool opacity-75 animate-ping" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cool" />
-                </span>
-                Available for select work
-              </span>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-accent" />
                 London, UK
